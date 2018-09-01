@@ -68,8 +68,8 @@
 							 </div>
 						</form>						
 					</div>
-					<h3 class="text-left" style="color:black;font-family: Monion pro">Varietas Terbaru</h3>
-					<hr style="border-color: grey;margin-top:  -10px; margin-bottom: 13px;">
+					<h3 class="text-left" style="color:black;font-family: helmet">Varietas Terbaru</h3>
+					<hr style="border-color: grey;margin-top: -10px;margin-bottom: 13px;">
 					<?php 
 						foreach ($varietas as $varietasSide) {
 							$namaVarietas = ""; $narasi = "";
@@ -83,18 +83,18 @@
 						<a href="<?php echo base_url('varietas/detailvarietas/').urlencode(strtolower($varietasSide->nama_varietas)); ?>" style="color:black;text-decoration-line: none;">
 							<p style="color:rgb(242,97,5);font-size: 15px;margin-bottom: 5px;" title="<?php echo $varietasSide->nama_varietas; ?>"><?php echo $namaVarietas; ?></p>
 							<div class="row">
-								<div class="col-xs-6 col-sm-6 col-lg-6">
-									<img src="<?php echo base_url() ?>assets/varietas/<?php echo $varietasSide->file_gambar; ?>" alt="" style="width: 135px;">	
+								<div class="col-xs-4 col-sm-4 col-lg-4">
+									<img src="<?php echo base_url() ?>assets/varietas/<?php echo $varietasSide->file_gambar; ?>" alt="img" style="width: 100px;">	
 								</div>
-								<div class="col-xs-6 col-sm-6 col-lg-6">
+								<div class="col-xs-8 col-sm-8 col-lg-8">
 								<?php 
 									if (!empty($varietasSide->narasi)) {
 										$narasi = substr($varietasSide->narasi, 0, 48)." [..]";
 									} else {
-										$narasi = "(Belum ada deskripsi mengenai varietas terkait!)";
+										$narasi = "Belum ada deskripsi mengenai varietas terkait!";
 									}
 								 ?>
-									<p style=" font-style: italic; font-size: 14px;"><?php echo $narasi; ?></p>					
+									<p style=" font-style: italic; font-size: 14px;margin-left: 10px;"><?php echo $narasi; ?></p>					
 								</div>		
 							</div>
 						</a>

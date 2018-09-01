@@ -20,14 +20,12 @@
 						<div class="col-xs-12 col-sm-12 col-lg-12">
 								<div class="thumbnail" style=" border-radius: 5px; background-color: rgba(36,112,101,0.1);">
 									<img src="<?php echo base_url() ?>assets/varietas/<?php echo $rowA->file_gambar; ?>" alt="" style="width: 100%;border-radius: 3px;">
-									<br>
-									<div class="container-fluid">
 									<span class="label label-success"><p class="glyphicon glyphicon-calendar"></p> <?php echo $rowA->tanggal_upload ?></span>
 									<span class="label label-warning"><p class="glyphicon glyphicon-time"></p> <?php echo $rowA->waktu_upload; ?></span>										
-									<h4 style="color:rgb(242,97,5);font-size: 24px; font-family: helmet;" class="pencarian"><?php echo $rowA->nama_varietas; ?></h4>									
+									<h4 style="color:rgb(242,97,5);font-size: 24px; font-family: helmet;" class="pencarian text-center"><?php echo $rowA->nama_varietas; ?></h4>									
+									<div class="container-fluid">
 									<p style="text-indent: 0.5in; text-align: justify;" class="pencarian"><?php echo $rowA->narasi; ?></p>
-
-									<br>
+									
 									<p><b>Spesifikasi Varietas :</b></p>
 										<table class="table table-hover">
 											<thead style="background-color: rgba(28,69,26,0.9);border-bottom: 3px solid white; color:#fece00;">
