@@ -226,8 +226,8 @@
 			});
 
 			function gambarLeaflet(value1, value2, nama1, nama2) {
-				document.getElementsByClassName('imgLeaflet')[0].src = "http://localhost/balittas/assets/leaflet/" + value1;
-				document.getElementsByClassName('imgLeaflet')[1].src = "http://localhost/balittas/assets/leaflet/" + value2;
+				document.getElementsByClassName('imgLeaflet')[0].src = "http://localhost/tembakau/assets/leaflet/" + value1;
+				document.getElementsByClassName('imgLeaflet')[1].src = "http://localhost/tembakau/assets/leaflet/" + value2;
 				document.getElementsByClassName('imgLeaflet')[0].alt = nama1;
 				document.getElementsByClassName('imgLeaflet')[1].alt = nama2;
 
