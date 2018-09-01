@@ -23,7 +23,7 @@
                $this->m_tembakau->addUser($ip,$tanggal,$waktu);
                $this->session->set_userdata('pengunjung','aktif');                  
             }
-            
+
             $counter['pengunjungTotal'] = $this->m_tembakau->getTotalVisitor();
             $counter['pengunjungHariIni'] = $this->m_tembakau->getTotalToday($tanggal); 
             $counter['pengunjungBulanIni'] = $this->m_tembakau->getTotalByMonth($bulanIni);
@@ -37,7 +37,7 @@
 
     		    $jumlah = $this->m_varietas->getJumlahVarietas();
 
-            $config['base_url'] = base_url()."Home/index/";
+            $config['base_url'] = base_url()."home/index/";
             $config['total_rows'] = $jumlah;
             $config['per_page'] = 9;
             $config['num_links'] = $jumlah;
