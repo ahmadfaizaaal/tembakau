@@ -42,7 +42,9 @@
 		public function deleteVarietas($id){			
 			$this->load->model("m_tembakau");
 			$datagambardansk = $this->m_tembakau->get_imgsk_varietas_byId($id);
-			unlink('assets/varietas/'.$datagambardansk[0]->file_gambar);
+			if ($datagambardansk[0]->file_gambar != "default.jpg") {
+				unlink('assets/varietas/'.$datagambardansk[0]->file_gambar);
+			}
 			unlink('assets/SK/'.$datagambardansk[0]->file_SK);
 			$this->m_tembakau->delete_varietas($id);
 			redirect(base_url('admin/home'));
