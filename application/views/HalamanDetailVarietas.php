@@ -1,22 +1,6 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<!-- <title>Balittas</title>
-		<meta charset="utf-8">		
-		<meta name="description" content="A Tuts+ course">		
-		<link rel="stylesheet" href="<?php echo base_url() ?>bootstrap/css/bootstrap.css">
-		<link rel="stylesheet" href="<?php echo base_url() ?>bootstrap/css/balittas.css">
-		<link href="<?php echo base_url() ?>item img/Logo-Kementerian-Pertanian.png" rel="shortcut icon">
-
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-		<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
-	</head>
 	<body>
-		
-
 		<!-- CONTENT -->
 		<div class="container">
 			<ul class="breadcrumb" style="margin-bottom: 0px;margin-top: 15px;">
@@ -90,15 +74,15 @@
 									    <span style="font-size: 12px;">Bagikan &nbsp</span>
 										<!-- SHARE LINK UNTUK FACEBOOK -->
 										<a id="button" onclick="window.open('http://www.facebook.com/sharer.php?s=100&amp;p[title]=<?php echo $rowA->nama_varietas; ?>&amp;p[summary]=<?php echo substr($rowA->narasi, 0, 25);?>&amp;p[url]=<?php echo base_url(); ?>&amp;&p[images][0]=<?php echo base_url(); ?>assets/varietas/<?php echo $rowA->file_gambar;?>', 'sharer', 'toolbar=0,status=0,width=550,height=400');" target="_parent" href="javascript: void(0)">
-                        					<span><img src="<?php echo base_url() ?>item img/fb.png" /></span>
+                        					<span><img src="<?php echo base_url() ?>assets/icon/fb.png" /></span>
                         				</a>
 										<!-- SHARE LINK UNTUK TWITTER -->
 										<a class="twitter popup" href="http://twitter.com/share?source=sharethiscom&text=<?php echo "Varietas Tembakau : ".$rowA->nama_varietas;?>&url=<?php echo base_url(); ?>&via=berbagiyuks" target="blank">
-											<span><img src="<?php echo base_url() ?>item img/twitter.png" /></span>
+											<span><img src="<?php echo base_url() ?>assets/icon/twitter.png" /></span>
 										</a>
 										<!-- SHARE LINK UNTUK GOOGLE PLUS -->
 										<a href="javascript:void(0);" onclick="popUp=window.open('https://plus.google.com/share?url=<?php echo base_url('varietas/detailvarietas/').$rowA->nama_varietas; ?> ','popupwindow','scrollbars=yes,width=800,height=400');popUp.focus();return false">
-											<span><img src="<?php echo base_url() ?>item img/gplus.png" /></span>
+											<span><img src="<?php echo base_url() ?>assets/icon/gplus.png" /></span>
 										</a>
 
 									</div>									

@@ -1,22 +1,6 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<!-- <title>Balittas</title>
-		<meta charset="utf-8">		
-		<meta name="description" content="A Tuts+ course">		
-		<link rel="stylesheet" href="<?php echo base_url() ?>bootstrap/css/bootstrap.css">
-		<link rel="stylesheet" href="<?php echo base_url() ?>bootstrap/css/balittas.css">
-		<link href="<?php echo base_url() ?>item img/Logo-Kementerian-Pertanian.png" rel="shortcut icon">
-
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-		<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
-	</head>
 	<body>
-		
-
 		<!-- CONTENT -->
 		<div class="container">
 			<ul class="breadcrumb" style="margin-bottom: 0px;margin-top: 15px;">

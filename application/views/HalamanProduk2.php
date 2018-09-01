@@ -1,20 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>Balittas</title>
-		<meta charset="utf-8">		
-		<meta name="description" content="A Tuts+ course">	
-		<link rel="stylesheet" href="<?php echo base_url() ?>bootstrap/css/bootstrap.css">
-		<link rel="stylesheet" href="<?php echo base_url() ?>bootstrap/css/balittas.css">
-		<link href="<?php echo base_url() ?>item img/Logo-Kementerian-Pertanian.png" rel="shortcut icon">
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-		<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-	</head>
 	<body>
-	
 		<br>
 		<!-- content -->
 		<div class="container">
@@ -23,12 +9,24 @@
 				    <ul class="breadcrumb" style="margin: -6px 0px -10px -15px;">
 					  	<li><a href="<?php echo base_url() ?>">Beranda</a></li>
 					  	<li><a href="<?php echo base_url("produk/$url") ?>">Produk</a></li>
-						<li class="active">Alat dan Mesin</li> 
+						<li class="active"><?php echo $kategori; ?></li> 
 					</ul>
 					<h3 class="text-left" style="color:black; font-family: Minion Pro"><?php echo $kategori; ?></h3>
 					<hr style="border-color: grey;margin-top: -8px;">
-					<div class="row">																		
-						<div class="col-xs-12 col-sm-6 col-lg-6"> 
+					<div class="row">
+						<div class="thumbku" style="box-shadow: 2px 5px 7px 5px rgba(0,0,0,0.2); border-color: white; color: #fece00;">					
+							<img src="<?php echo base_url()?>assets/varietas/default.jpg" alt="" style="width: 100%;border-radius: 3px;">				
+							<br>
+							<table class="table" style="margin-bottom: -10px;">
+								<tbody>
+									<tr style="border-top: 2px solid white !important;">
+										<td class="text-center"><h2><b>Masih dalam proses pengerjaan!</b></h2></td>
+									</tr>
+								</tbody>
+							</table>
+							<br>															
+						</div>																		
+						<!-- <div class="col-xs-12 col-sm-6 col-lg-6"> 
 							<div class="thumbnail" style="box-shadow: 2px 5px 7px 5px rgba(0,0,0,0.2); border-color: white;">	
 								<div style="color:#fece00;background-color: rgb(28,69,26); height:30px;margin-top: -10px;border-radius: 2px;margin-bottom: 5px;">
 									<h4 style="padding-top: 7px;" class="text-center">VARIETAS NC 471</h4>
@@ -49,8 +47,8 @@
 								</table>
 								<br>															
 							</div>						
-						</div>
-						<div class="col-xs-12 col-sm-6 col-lg-6"> 
+						</div> -->
+						<!-- <div class="col-xs-12 col-sm-6 col-lg-6"> 
 							<div class="thumbnail" style="box-shadow: 2px 5px 7px 5px rgba(0,0,0,0.2); border-color: white;">	
 								<div style="color:#fece00;background-color: rgb(28,69,26); height:30px;margin-top: -10px;border-radius: 2px;margin-bottom: 5px;">
 									<h4 style="padding-top: 7px;" class="text-center">VARIETAS NC 471</h4>
@@ -78,7 +76,7 @@
 								</table> 	
 								<br>															
 							</div>						
-						</div>
+						</div> -->
 					</div>					
 				</div>				
 				<div class="col-sm-3 col-lg-3">

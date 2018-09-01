@@ -1,26 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<!-- <title>Balittas</title>
-		<meta charset="utf-8">		
-		<meta name="description" content="A Tuts+ course">	
-		<link rel="stylesheet" href="<?php echo base_url() ?>bootstrap/css/bootstrap.css">
-		<link rel="stylesheet" href="<?php echo base_url() ?>bootstrap/css/balittas.css">
-		<link href="<?php echo base_url() ?>item img/Logo-Kementerian-Pertanian.png" rel="shortcut icon">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/semantic.min.css">
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-		<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
-
-		<!-- <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/semantic.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.min.js"></script>
-		<script type="text/javascript" src="<?php echo base_url() ?>bootstrap/js/jQuery.highlight.js"></script> -->
-	</head>
 	<body>
-		
 		<br>
 		<!-- content -->
 		<div class="container">			

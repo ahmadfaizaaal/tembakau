@@ -30,7 +30,7 @@
 				<div class="container-fluid">
 				    <div class="navbar-header" style="margin-top: 5px; margin-bottom: 3px;">						    
 				      <!-- <a href="<?php //echo base_url() ?>"><img src="<?php //echo base_url() ?>item img/logoBalittas2.png" style="width:280px;margin-top: -18px;margin-bottom: -6px;margin-left: 5px;"></a> -->
-				      <a href="<?php echo base_url() ?>"><img src="<?php echo base_url() ?>item img/logobalittas.png" style="width:280px; margin-left: 5px;"></a>
+				      <a href="<?php echo base_url() ?>"><img src="<?php echo base_url() ?>assets/icon/logobalittas.png" style="width:280px; margin-left: 5px;"></a>
 				      <button type="botton" class="navbar-toggle" data-toggle="collapse" data-target="#main" style="margin-top: 10px;">
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
@@ -147,13 +147,13 @@
 				if (empty($judul)) { ?>
 					<div class="containerImg">
 						<video autoplay muted loop style="width: 100%">
-							<source src="<?php echo base_url() ?>item img/tembakauFix.mp4" type="video/mp4">
+							<source src="<?php echo base_url() ?>assets/icon/tembakauFix.mp4" type="video/mp4">
 						</video>			  				 	
 					</div>							
 			<?php
 				} else { ?>
 					<div class="containerImg">
-						<img src="<?php echo base_url() ?>item img/tembakauHeader.jpg" alt="" style="width: 100%;">
+						<img src="<?php echo base_url() ?>assets/icon/tembakauHeader.jpg" alt="" style="width: 100%;">
 					 	<div class="contentImg text-center">
 						    <h1 class="hidden-xs hidden-sm" style="margin-top:12%;font-size:5vw; font-family: futura md bt;"><?php echo $judul; ?></h1>
 						    <h1 class="hidden-md hidden-lg" style="margin-top:6vw;font-size:5vw; font-family: futura md bt;"><?php echo $judul; ?></h1>

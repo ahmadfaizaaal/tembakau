@@ -34,7 +34,7 @@
 									</div>
 								</div>-->
 								<!-- <img src="<?php //echo base_url() ?>item img/logoBalittas2.png" style="width: 110%;margin:-27px 0px -8px -32px;"> -->
-								<img src="<?php echo base_url() ?>item img/logobalittas.png" style="width: 110%;margin: -10px 0px 0px -32px;">				
+								<img src="<?php echo base_url() ?>assets/icon/logobalittas.png" style="width: 110%;margin: -10px 0px 0px -32px;">				
 								<table>
 									<tbody>
 										<tr>
@@ -117,22 +117,22 @@
 									<div class="row">
 										<div class="col-xs-3 col-sm-3 col-lg-3" style="margin: 0px -7px 9px 0px;">
 											<a href="https://web.facebook.com/balittas.malang" target="blank">
-												<img src="<?php echo base_url() ?>item img/fbb.png" class="img-rounded" alt="Cinque Terre" width="50" height="50">
+												<img src="<?php echo base_url() ?>assets/icon/fbb.png" class="img-rounded" alt="Cinque Terre" width="50" height="50">
 											</a>
 										</div>
 										<div class="col-xs-3 col-sm-3 col-lg-3" style="margin: 0px -7px 9px 0px;">
 											<a href="https://twitter.com/BalittasMalang" target="blank">
-												<img src="<?php echo base_url() ?>item img/twitterBig.png" class="img-rounded" alt="Cinque Terre" width="50" height="50">
+												<img src="<?php echo base_url() ?>assets/icon/twitterBig.png" class="img-rounded" alt="Cinque Terre" width="50" height="50">
 											</a>
 										</div>
 										<div class="col-xs-3 col-sm-3 col-lg-3" style="margin: 0px -7px 9px 0px;">
 											<a href="https://www.youtube.com/channel/UCiYhtpYmb_SWaIJMarhejag/featured" target="blank">
-												<img src="<?php echo base_url() ?>item img/youtube.png" class="img-rounded" alt="Cinque Terre" width="50" height="50">
+												<img src="<?php echo base_url() ?>assets/icon/youtube.png" class="img-rounded" alt="Cinque Terre" width="50" height="50">
 											</a>
 										</div>
 										<div class="col-xs-3 col-sm-3 col-lg-3" style="margin: -3px -7px 9px 0px;">
 											<a href="https://www.instagram.com/balittas_malang/" target="blank">
-												<img src="<?php echo base_url() ?>item img/insta.png" class="img-rounded" alt="Cinque Terre" width="58" height="auto">
+												<img src="<?php echo base_url() ?>assets/icon/insta.png" class="img-rounded" alt="Cinque Terre" width="58" height="auto">
 											</a>
 										</div>
 									</div>

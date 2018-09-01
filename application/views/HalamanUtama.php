@@ -1,18 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<!-- <title>Balittas</title>
-		<meta charset="utf-8">		
-		<meta name="description" content="A Tuts+ course">		 -->
-		<!-- <link rel="stylesheet" href="<?php echo base_url() ?>bootstrap/css/bootstrap.css"> -->
-		<!-- <link rel="stylesheet" href="<?php echo base_url() ?>bootstrap/css/balittas.css">		 -->
-
-		<!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-		<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
-	</head>
 	<body>
 		<!-- <div class="thetop"></div> -->
 		
@@ -136,8 +123,8 @@
 				    <div class="col-xs-6 col-sm-3 col-lg-3">
 					    <a href="<?php echo base_url() ?>produk/benih" style="text-decoration-line: none;" onmouseover="hvr(this, 'in')" onmouseleave="hvr(this, 'out')">
 					    	<div class="thumbnail text-center produk" style="background-color: rgba(28,69,26,0); border-style: none;" >
-					    		<img src="<?php echo base_url() ?>item img/hazelnutWh.png" style="width: 40%" col="g">
-					    		<img src="<?php echo base_url() ?>item img/hazelnutY.png" style="width: 40%; display:none;" col="b">
+					    		<img src="<?php echo base_url() ?>assets/icon/hazelnutWh.png" style="width: 40%" col="g">
+					    		<img src="<?php echo base_url() ?>assets/icon/hazelnutY.png" style="width: 40%; display:none;" col="b">
 					    		<br>
 								<h4 style="font-family: helmet;">Benih</h4>
 					    	</div>
@@ -146,8 +133,8 @@
 				    <div class="col-xs-6 col-sm-3 col-lg-3">
 					    <a href="<?php echo base_url() ?>produk/alsin" style="text-decoration-line: none;" onmouseover="hvr(this, 'in')" onmouseleave="hvr(this, 'out')">
 					    	<div class="thumbnail text-center produk" style="background-color: rgba(28,69,26,0); border-style: none">
-					    		<img src="<?php echo base_url() ?>item img/toolsWh.png" style="width: 40%" col="g">
-					    		<img src="<?php echo base_url() ?>item img/toolsY.png" style="width: 40%; display:none;" col="b">
+					    		<img src="<?php echo base_url() ?>assets/icon/toolsWh.png" style="width: 40%" col="g">
+					    		<img src="<?php echo base_url() ?>assets/icon/toolsY.png" style="width: 40%; display:none;" col="b">
 					    		<br>
 								<h4 style="font-family: helmet;">Alat & Mesin</h4>
 					    	</div>
@@ -156,8 +143,8 @@
 				    <div class="col-xs-6 col-sm-3 col-lg-3">
 					    <a href="<?php echo base_url() ?>produk/formula" style="text-decoration-line: none;" onmouseover="hvr(this, 'in')" onmouseleave="hvr(this, 'out')">
 					    	<div class="thumbnail text-center produk" style="background-color: rgba(28,69,26,0); border-style: none">
-					    		<img src="<?php echo base_url() ?>item img/flaskWh.png" style="width: 40%" col="g">
-					    		<img src="<?php echo base_url() ?>item img/flaskY.png" style="width: 40%; display:none;" col="b">
+					    		<img src="<?php echo base_url() ?>assets/icon/flaskWh.png" style="width: 40%" col="g">
+					    		<img src="<?php echo base_url() ?>assets/icon/flaskY.png" style="width: 40%; display:none;" col="b">
 					    		<br>
 								<h4 style="font-family: helmet;">Formula</h4>
 					    	</div>
@@ -166,8 +153,8 @@
 				    <div class="col-xs-6 col-sm-3 col-lg-3">
 					    <a href="<?php echo base_url() ?>produk/produkhilir" style="text-decoration-line: none;" onmouseover="hvr(this, 'in')" onmouseleave="hvr(this, 'out')">
 					    	<div class="thumbnail text-center produk" style="background-color: rgba(28,69,26,0); border-style: none">
-					    		<img src="<?php echo base_url() ?>item img/pipeWh.png" style="width: 40%" col="g">
-					    		<img src="<?php echo base_url() ?>item img/pipeY.png" style="width: 40%; display:none;" col="b">
+					    		<img src="<?php echo base_url() ?>assets/icon/pipeWh.png" style="width: 40%" col="g">
+					    		<img src="<?php echo base_url() ?>assets/icon/pipeY.png" style="width: 40%; display:none;" col="b">
 					    		<br>
 								<h4 style="font-family: helmet;">Produk Hilir</h4>
 					    	</div>

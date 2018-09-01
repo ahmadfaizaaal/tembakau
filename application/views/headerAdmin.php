@@ -8,7 +8,7 @@
 		<meta name="author" content="Gusna Ikhsan">		
 		<!-- <link rel="stylesheet" href="<?php echo base_url() ?>bootstrap/css/bootstrap.css"> -->
 		<link rel="stylesheet" href="<?php echo base_url() ?>bootstrap/css/balittas.css">
-		<link href="<?php echo base_url() ?>item img/Logo-Kementerian-Pertanian.png" rel="shortcut icon">
+		<link href="<?php echo base_url() ?>assets/icon/Logo-Kementerian-Pertanian.png" rel="shortcut icon">
 
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -28,7 +28,7 @@
 				<div class="container-fluid">
 				    <div class="navbar-header" style="margin-top: 5px; margin-bottom: 3px;">
 				    	<!-- <img src="<?php //echo base_url() ?>item img/logobalittas.png" style="width:280px; margin-left: 5px;"> -->
-				    	<img src="<?php echo base_url() ?>item img/logobalittasadmin.png" style="width:422px; margin-left: 5px;">
+				    	<img src="<?php echo base_url() ?>assets/icon/logobalittasadmin.png" style="width:422px; margin-left: 5px;">
 				    </div>			
 				    <div class="collapse navbar-collapse">			    
 					    <ul class="nav navbar-nav navbar-right" style="margin-top: 10px;margin-right: 0px;">
@@ -45,7 +45,7 @@
 				if (empty($judul)) { ?>
 					<div class="containerImg">
 						<video autoplay muted loop style="width: 100%">
-							<source src="<?php echo base_url() ?>item img/tembakauFix.mp4" type="video/mp4">
+							<source src="<?php echo base_url() ?>assets/icon/tembakauFix.mp4" type="video/mp4">
 						</video>			  				 	
 					</div>							
 			<?php
