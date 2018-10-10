@@ -185,7 +185,8 @@
 
 			$targetpathleaflet = "assets/leaflet/";
 
-			$this->m_tembakau->updateLeafletName($idleaflet,$nama);		
+			$this->m_tembakau->updateLeafletName($idleaflet,$nama);	
+			//hapus if yang diatas	
 			if (empty($_FILES['leaflet1']['name'])&&empty($_FILES['leaflet2']['name'])) {			
 			}elseif (!empty($_FILES['leaflet1']['name'])&&!empty($_FILES['leaflet2']['name'])) {
 				unlink($targetpathleaflet.$dataleaflet1[0]->file);
@@ -366,9 +367,9 @@
 
 			
 			if (empty($_FILES['gambaragri']['name'])) {
-				$gambaragri = "tembakau.jpg";
-				$targetpathagribisnisgmbr = $targetpathagrigmbr.basename($_FILES['pdfagri']['name']);
-				move_uploaded_file($_FILES['pdfagri']['tmp_name'],$targetpathagribisnisgmbr);
+				$gambaragri = "default.JPG";
+				$targetpathagribisnisfile = $targetpathagrifile.basename($_FILES['pdfagri']['name']);
+				move_uploaded_file($_FILES['pdfagri']['tmp_name'],$targetpathagribisnisfile);
 				$this->m_tembakau->add_agribisnis($jenis,$des,$_FILES['pdfagri']['name'],$gambaragri);
 			}else{
 				$targetpathagribisnisgmbr = $targetpathagrigmbr.basename($_FILES['gambaragri']['name']);

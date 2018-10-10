@@ -36,7 +36,7 @@
 											<tbody>
 											<?php 
 												$count = 1;
-												foreach ($detailVarietas as $rowDetail) {
+												foreach ($spesifikasiVarietas as $rowDetail) {
 													
 											 ?>
 												<tr>
