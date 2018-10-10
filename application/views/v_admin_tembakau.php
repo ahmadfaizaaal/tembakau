@@ -454,7 +454,7 @@
                                     </button>                                    
                                     <div class="btn btn-default image-preview-input">                                        
                                         <span class="image-preview-input-title">Pilih File</span>
-                                        <input type="file" style="width:100px" accept="image/png, image/jpeg, image/gif," name="gambar">                                        
+                                        <input type="file" style="width:100px" accept="image/png, image/jpeg, image/jpg," name="gambar">                                        
                                     </div>
                                 </span>
                             </div>
@@ -634,7 +634,7 @@
                                     </button>                                    
                                     <div class="btn btn-default image-preview-input">                                        
                                         <span class="image-preview-input-title">Pilih File</span>
-                                        <input type="file" style="width:100px" accept="image/png, image/jpeg, image/gif" id="gmbr" name="gambar">
+                                        <input type="file" style="width:100px" accept="image/png, image/jpeg, image/jpg" id="gmbr" name="gambar">
                                     </div>
                                 </span>
                             </div>
@@ -843,7 +843,7 @@
                         <div class="form-group" style="padding-bottom: 0px">
                             <label>Upload Gambar Ke-1</label>
                             <div class="input-group">              
-                                <input type="file" id="gmbr1" name="gambar1" style="display:none" onchange="document.getElementById('img1').value=this.value" accept="image/png, image/jpeg, image/gif" required>
+                                <input type="file" id="gmbr1" name="gambar1" style="display:none" onchange="document.getElementById('img1').value=this.value" accept="image/png, image/jpeg, image/jpg" required>
                                 <input type="text" id="img1" style="width: 468px;height: 35px;" disabled="disable" placeholder="1169x827 piksel">
                                 <input type="button" value="Pilih File" onclick="document.getElementById('gmbr1').click()" style="height: 35px;margin-top: -2px;" class="btn btn-default">                                
                             </div>
@@ -851,7 +851,7 @@
                         <div class="form-group" style="padding-bottom: 0px">
                             <label>Upload Gambar Ke-2</label>
                             <div class="input-group">                                
-                                <input type="file" id="gmbr2" name="gambar2" style="display:none" onchange="document.getElementById('img2').value=this.value" accept="image/png, image/jpeg, image/gif" required>
+                                <input type="file" id="gmbr2" name="gambar2" style="display:none" onchange="document.getElementById('img2').value=this.value" accept="image/png, image/jpeg, image/jpg" required>
                                 <input type="text" id="img2" style="width: 468px;height: 35px;" disabled="disable" placeholder="1169x827 piksel" required>
                                 <input type="button" value="Pilih File" onclick="document.getElementById('gmbr2').click()" style="height: 35px;margin-top: -2px;" class="btn btn-default">                                
                             </div>
@@ -886,7 +886,7 @@
                         <div class="form-group" style="padding-bottom: 0px">
                             <label>Upload Gambar Ke-1</label>
                             <div class="input-group">              
-                                <input type="file" id="leaf1" name="leaflet1" style="display:none" onchange="document.getElementById('leaflet1').value=this.value" accept="image/png, image/jpeg, image/gif">
+                                <input type="file" id="leaf1" name="leaflet1" style="display:none" onchange="document.getElementById('leaflet1').value=this.value" accept="image/png, image/jpeg, image/jpg">
                                 <input type="text" id="leaflet1" style="width: 468px;height: 35px;" disabled="disable">
                                 <input type="button" value="Pilih File" onclick="document.getElementById('leaf1').click()" style="height: 35px;margin-top: -2px;" class="btn btn-default">                                
                             </div>
@@ -894,7 +894,7 @@
                         <div class="form-group" style="padding-bottom: 0px">
                             <label>Upload Gambar Ke-2</label>
                             <div class="input-group">                                
-                                <input type="file" id="leaf2" name="leaflet2" style="display:none" onchange="document.getElementById('leaflet2').value=this.value" accept="image/png, image/jpeg, image/gif">
+                                <input type="file" id="leaf2" name="leaflet2" style="display:none" onchange="document.getElementById('leaflet2').value=this.value" accept="image/png, image/jpeg, image/jpg">
                                 <input type="text" id="leaflet2" style="width: 468px;height: 35px;" disabled="disable" required>
                                 <input type="button" value="Pilih File" onclick="document.getElementById('leaf2').click()" style="height: 35px;margin-top: -2px;" class="btn btn-default">                                
                             </div>
@@ -1162,7 +1162,7 @@
                         <div class="form-group" style="padding-bottom: 0px">
                             <label>Upload Gambar</label>
                             <div class="input-group">              
-                                <input type="file" id="gmbragri" name="gambaragri" style="display:none" onchange="document.getElementById('agri').value=this.value" accept="image/png, image/jpeg, image/gif">
+                                <input type="file" id="gmbragri" name="gambaragri" style="display:none" onchange="document.getElementById('agri').value=this.value" accept="image/png, image/jpeg, image/jpg">
                                 <input type="text" id="agri" style="width: 468px;height: 35px;" disabled="disable" placeholder="1923x1234 piksel">
                                 <input type="button" value="Pilih File" onclick="document.getElementById('gmbragri').click()" style="height: 35px;margin-top: -2px;" class="btn btn-default">                                
                             </div>
@@ -1243,7 +1243,7 @@
                         <div class="form-group" style="padding-bottom: 0px">
                             <label>Upload Gambar</label>
                             <div class="input-group">              
-                                <input type="file" id="editgmbragri" name="editgambaragri" style="display:none" onchange="document.getElementById('editagri').value=this.value" accept="image/png, image/jpeg, image/gif">
+                                <input type="file" id="editgmbragri" name="editgambaragri" style="display:none" onchange="document.getElementById('editagri').value=this.value" accept="image/png, image/jpeg, image/jpg">
                                 <input type="text" id="editagri" style="width: 468px;height: 35px;" disabled="disable">
                                 <input type="button" value="Pilih File" onclick="document.getElementById('editgmbragri').click()" style="height: 35px;margin-top: -2px;" class="btn btn-default"> 
                             </div>

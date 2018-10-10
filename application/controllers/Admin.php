@@ -47,7 +47,7 @@
 			}
 			unlink('assets/SK/'.$datagambardansk[0]->file_SK);
 			$this->m_tembakau->delete_varietas($id);
-			redirect(base_url('admin/home'));
+			redirect(base_url('admin/home#tabelVarietas'));
 		}		
 		public function tambahVarietas(){
 			$this->load->model("m_tembakau");
@@ -73,17 +73,13 @@
 				$gambarVarietas = $_FILES['gambar']['name'];
 			}
 			$this->m_tembakau->add_varietas($namaVarietas,$tglPelepasan,$tgl,$wkt,$_FILES['sk']['name'],$gambarVarietas);			
-			$this->m_tembakau->add_deskripsi_varietas($deskripsi);
-			// echo $this->input->post('temp')."<br>";
+			$this->m_tembakau->add_deskripsi_varietas($deskripsi);			
 			for ($i=0; $i < $this->input->post('temp') ; $i++) { 
 				$tesAtribut = $this->input->post('atribut'."$i");
 				if (!is_null($tesAtribut)) {
 					$idAtribut = $this->m_tembakau->getIdAtribut($this->input->post('atribut'."$i"));
 					if (!empty($idAtribut)) {
-						$this->m_tembakau->add_detail_deskripsi($idAtribut,$this->input->post('value'."$i"));
-						// echo "->".$this->input->post('value'."$i")."<br>";
-						// echo "->".$this->input->post('value0')."<br>";
-						// echo "->".$this->input->post('value2')."<br>";
+						$this->m_tembakau->add_detail_deskripsi($idAtribut,$this->input->post('value'."$i"));					
 					} else {
 						$this->m_tembakau->addAtribut($this->input->post('atribut'."$i"));
 						$idAtribut = $this->m_tembakau->getIdAtribut($this->input->post('atribut'."$i"));
@@ -93,7 +89,7 @@
 			}
 			move_uploaded_file($_FILES['gambar']['tmp_name'],$targetpathgmbr);
 			move_uploaded_file($_FILES['sk']['tmp_name'],$targetpathsk);				
-			redirect(base_url('admin/home'));	
+			redirect(base_url('admin/home#tabelVarietas'));	
 		}
 		public function editVarietas(){
 			$this->load->model("m_tembakau");
@@ -127,7 +123,7 @@
 				move_uploaded_file($_FILES['sk']['tmp_name'],$targetpathsk);
 				$this->m_tembakau->updateVarietasKecGmbr($idVar,$namaVarietas,$tgl,$_FILES['sk']['name']);
 			}
-			redirect(base_url('admin/home'));
+			redirect(base_url('admin/home#tabelVarietas'));
 		}
 		public function editDesVarietas(){
 			$this->load->model("m_tembakau");
@@ -151,7 +147,7 @@
 				// $idAtribut = $this->m_tembakau->getIdAtribut("asal");
 				$this->m_tembakau->updateDetailDeskripsi($idDes, $idAtribut, $this->input->post('value'."$i"));
 			}
-			redirect(base_url('admin/home'));
+			redirect(base_url('admin/home#tabelVarietas'));
 		}
 
 	//========================================LEAFLET========================================
@@ -170,7 +166,7 @@
 			move_uploaded_file($_FILES['gambar2']['tmp_name'],$targetpathleaflet2);
 			$this->m_tembakau->add_leaflet_img($_FILES['gambar2']['name']);
 
-			redirect(base_url('admin/home'));
+			redirect(base_url('admin/home#tabelLeaflet'));
 		}
 		public function editLeaflet(){
 			$this->load->model("m_tembakau");
@@ -207,7 +203,7 @@
 				move_uploaded_file($_FILES['leaflet2']['tmp_name'],$targetpathleaflet2);
 				$this->m_tembakau->updateLeafletImg($idgmbr2,$_FILES['leaflet2']['name']);
 			}
-			redirect(base_url('admin/home'));
+			redirect(base_url('admin/home#tabelLeaflet'));
 
 		}
 		public function deleteLeaflet($id){			
@@ -217,7 +213,7 @@
 			unlink($targetpathleaflet.$dataleaflet[0]->file);
 			unlink($targetpathleaflet.$dataleaflet[1]->file);
 			$this->m_tembakau->delete_leaflet($id);
-			redirect(base_url('admin/home'));
+			redirect(base_url('admin/home#tabelLeaflet'));
 		}
 
 	//==========================================PRODUK=========================================
@@ -231,7 +227,7 @@
 		
 			$this->m_tembakau->add_benih($namabenih,$stoksampai,$jumstok);
 			
-			redirect(base_url('admin/home'));
+			redirect(base_url('admin/home#tabelBenih'));
 		}
 		public function editBenih(){
 			$this->load->model("m_tembakau");	
@@ -242,12 +238,12 @@
 			$jumlahstok = $this->input->post('editjumlahstok');	
 
 			$this->m_tembakau->update_benih($id,$namabenih,$stoksampai,$jumlahstok);
-			redirect(base_url('admin/home'));
+			redirect(base_url('admin/home#tabelBenih'));
 		}
 		public function deleteBenih($id){			
 			$this->load->model("m_tembakau");		
 			$this->m_tembakau->delete_benih($id);
-			redirect(base_url('admin/home'));
+			redirect(base_url('admin/home#tabelBenih'));
 		}
 
 		// PRODUK DISTRIBUSI BENIH
@@ -272,7 +268,7 @@
 				$this->m_tembakau->add_distribusi_benih($idBenih2,$tgl,$thn,$kelas,$jumlah,$ket);
 			}
 			
-			redirect(base_url('admin/home'));
+			redirect(base_url('admin/home#tabelDistribusibenih'));
 		}
 		public function editDistribusiBenih(){
 			$this->load->model("m_tembakau");	
@@ -286,12 +282,12 @@
 			$ket = $this->input->post('editketerangan');		
 
 			$this->m_tembakau->update_distribusi_benih($iddistribusi,$tgl,$thn,$kls,$jum,$ket);
-			redirect(base_url('admin/home'));
+			redirect(base_url('admin/home#tabelDistribusibenih'));
 		}
 		public function deleteDistribusiBenih($id){			
 			$this->load->model("m_tembakau");		
 			$this->m_tembakau->delete_distribusi_benih($id);
-			redirect(base_url('admin/home'));
+			redirect(base_url('admin/home#tabelDistribusibenih'));
 		}
 
 	//========================================TEKNOLOGI========================================
@@ -315,7 +311,7 @@
 			move_uploaded_file($_FILES['pdf']['tmp_name'],$targetpathteknologi);
 			$this->m_tembakau->add_teknologi($id,$nama,$des,$_FILES['pdf']['name']);
 			
-			redirect(base_url('admin/home'));
+			redirect(base_url('admin/home#tabelTeknologi'));
 		}
 		public function editMonografTeknologi(){
 			$this->load->model("m_tembakau");
@@ -337,7 +333,7 @@
 				$this->m_tembakau->update_tekbud($id,$nama,$des,$_FILES['editpdf']['name']);
 			}
 
-			redirect(base_url('admin/home'));
+			redirect(base_url('admin/home#tabelTeknologi'));
 			
 		}
 		public function deleteMonografTeknologi($id){						
@@ -346,7 +342,7 @@
 			$datatekno = $this->m_tembakau->get_tekbud_byId($id);
 			unlink($targetpathtekno.$datatekno[0]->file);
 			$this->m_tembakau->delete_tekbud($id);
-			redirect(base_url('admin/home'));
+			redirect(base_url('admin/home#tabelTeknologi'));
 		}
 
 	//========================================AGRIBISNIS========================================
@@ -377,7 +373,7 @@
 				move_uploaded_file($_FILES['pdfagri']['tmp_name'],$targetpathagribisnisfile);
 				$this->m_tembakau->add_agribisnis($jenis,$des,$_FILES['pdfagri']['name'],$_FILES['gambaragri']['name']);
 			}
-			redirect(base_url('admin/home'));
+			redirect(base_url('admin/home#tabelAgribisnis'));
 		}
 		public function editAgribisnis(){
 			$this->load->model("m_tembakau");
@@ -411,7 +407,7 @@
 				move_uploaded_file($_FILES['editpdfagri']['tmp_name'],$targetpathagribisnisfile);			
 				$this->m_tembakau->update_agribisnis_noimg($id,$jenis,$des,$_FILES['editpdfagri']['name']);
 			}		
-			redirect(base_url('admin/home'));
+			redirect(base_url('admin/home#tabelAgribisnis'));
 		}
 		public function deleteAgribisnis($id){			
 			$this->load->model("m_tembakau");
@@ -421,7 +417,7 @@
 			unlink($targetpathagrigmbr.$dataagri[0]->gambar_agribisnis);
 			unlink($targetpathagrifile.$dataagri[0]->file);
 			$this->m_tembakau->delete_agribisnis($id);
-			redirect(base_url('admin/home'));
+			redirect(base_url('admin/home#tabelAgribisnis'));
 		}
 	}
  ?>
