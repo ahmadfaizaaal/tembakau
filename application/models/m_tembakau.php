@@ -5,8 +5,7 @@
 			$sql = $this->db->query("SELECT *
 								FROM varietas v
 								JOIN deskripsi_varietas dsv ON v.id_varietas = dsv.id_varietas order by v.id_varietas desc");
-			return $sql->result_array();
-
+			return $sql->result();
 		}		
 		public function get_all_detail_varietas(){			
 			$sql = $this->db->query("SELECT v.id_varietas,v.nama_varietas,a.id_atribut, dd.id_deskripsi_varietas, a.nama_atribut,dd.detail_value
@@ -71,7 +70,7 @@
 // LEAFLET
 		public function get_leaflet(){					
 			$sql = $this->db->query("SELECT * FROM leaflet order by id_leaflet desc");
-			return $sql->result_array();
+			return $sql->result();
 		}
 		public function get_leaflet_img(){				
 			$sql = $this->db->query("SELECT * FROM gambar_leaflet");
@@ -105,7 +104,7 @@
 		public function get_tekbud(){					
 
 			$sql = $this->db->query("SELECT t.id_teknologi_budidaya,t.jenis_teknologi_budidaya,f.id_file,f.nama_file,f.deskripsi_file,f.file FROM file_teknologi f join teknologi_budidaya t on f.id_teknologi_budidaya = t.id_teknologi_budidaya order by t.id_teknologi_budidaya desc");
-			return $sql->result_array();
+			return $sql->result();
 		}
 		public function get_tekbud_byId($id){						
 			$sql = $this->db->query("SELECT * FROM file_teknologi WHERE id_file = \"$id\"");
@@ -127,7 +126,7 @@
 // AGRIBISNIS
 		public function get_agri(){						
 			$sql = $this->db->query("SELECT * FROM agribisnis order by id_agribisnis desc");
-			return $sql->result_array();
+			return $sql->result();
 		}
 		public function get_agri_byId($id){						
 			$sql = $this->db->query("SELECT * FROM agribisnis WHERE id_agribisnis = \"$id\"");
@@ -155,7 +154,7 @@
 // PRODUK BENIH
 		public function get_benih(){						
 			$sql = $this->db->query("SELECT * FROM benih order by id_benih desc");
-			return $sql->result_array();
+			return $sql->result();
 		}
 		public function add_benih($nama,$stoksampai,$jumstok){			
 			$sql = $this->db->query("INSERT INTO benih (id_benih,nama_benih,stok_sampai,jumlah_stok) VALUES (\"\",\"$nama\",\"$stoksampai\",\"$jumstok\")");			
@@ -170,7 +169,7 @@
 		// DISTRIBUSI BENIH
 		public function get_distribusi_benih(){				
 			$sql = $this->db->query("SELECT db.id_distribusi,db.id_benih,b.nama_benih,db.tanggal,db.tahun_panen,db.kelas_benih,db.jumlah_kg,db.keterangan FROM benih b JOIN distribusi_benih db on b.id_benih = db.id_benih ORDER BY db.id_distribusi desc");
-			return $sql->result_array();
+			return $sql->result();
 		}
 		public function get_nama_benih() {			
 			$sql = $this->db->query("SELECT nama_benih FROM benih ORDER BY id_benih ASC");
