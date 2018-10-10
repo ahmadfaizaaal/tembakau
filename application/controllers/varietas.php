@@ -103,7 +103,7 @@
 				$data['keyword'] = urldecode($namaVarietas[1]);
 			}
 			$data['varietas'] = $this->m_varietas->selectVarietasById($idVarietas);
-			$data['detailVarietas'] = $this->m_varietas->selectDetailVarietas($idVarietas);
+			$data['spesifikasiVarietas'] = $this->m_varietas->selectDetailVarietas($idVarietas);
 			$data['subLeaflet'] = $this->M_leaflet->selectLeafletTerbaru();
 
 			$this->load->view('header', $dataHeader);

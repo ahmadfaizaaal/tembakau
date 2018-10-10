@@ -51,6 +51,7 @@
 
 		public function filterDistribusi() {
 			$tahun_bulan = $this->input->post('tahun_bulan');
+         // echo $tahun_bulan;
 			$data['dataDistribusiFiltered'] = $this->m_produk->selectDistribusiFiltered(substr($tahun_bulan, 0, 4) , substr($tahun_bulan, 5, 2));
 			$this->load->view('FilterTable', $data);
 		}

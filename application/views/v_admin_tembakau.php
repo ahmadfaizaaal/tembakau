@@ -84,9 +84,10 @@
                                     $count1 = 0;   
                                     $count2 = 0;                                                                    
                                     foreach ($detail_varietas as $value) {  
-                                        if ($row['id_varietas']==$value['id_varietas']) {
-                                            $atr[$count1] = $value['nama_atribut'];
-                                            $ket[$count2] = $value['detail_value'];                             
+                                        // if ($row['id_varietas']==$value['id_varietas']) {
+                                        if ($row->id_varietas==$value->id_varietas) {    
+                                            $atr[$count1] = $value->nama_atribut;
+                                            $ket[$count2] = $value->detail_value;                             
 
                                         $count1++;   
                                         $count2++;                                      
@@ -94,18 +95,26 @@
 
                                     }
 
-                                    $id = $row['id_varietas'];                                     
-                                    $nama = $row['nama_varietas'];
-                                    $gmbr = $row['file_gambar'];
-                                    $sk = $row['file_SK'];
-                                    $tgl = $row['tanggal_pelepasan'];
-                                    $nar = $row['narasi'];
-                                    $idDes = $row['id_deskripsi_varietas'];
+                                    // $id = $row['id_varietas'];                                     
+                                    // $nama = $row['nama_varietas'];
+                                    // $gmbr = $row['file_gambar'];
+                                    // $sk = $row['file_SK'];
+                                    // $tgl = $row['tanggal_pelepasan'];
+                                    // $nar = $row['narasi'];
+                                    // $idDes = $row['id_deskripsi_varietas'];
+
+                                    $id = $row->id_varietas;                                     
+                                    $nama = $row->nama_varietas;
+                                    $gmbr = $row->file_gambar;
+                                    $sk = $row->file_SK;
+                                    $tgl = $row->tanggal_pelepasan;
+                                    $nar = $row->narasi;
+                                    $idDes = $row->id_deskripsi_varietas;
 
                                                                                             
                                  ?>                                 
                                 <td><?php echo $no; ?></td>                                
-                                <td><?php echo $row['nama_varietas']; ?></td>                              
+                                <td><?php echo $row->nama_varietas; ?></td>                              
                                 <td>
                                 <script>                                   
                                     window['atr' + <?php echo $no; ?>] = [
@@ -130,11 +139,11 @@
                                         <button class="btn btn-warning">Spesifikasi</button>
                                     </a>
                                 </td>       
-                                <td><?php echo $row['tanggal_pelepasan']; ?></td>                         
-                                <td><?php echo $row['file_gambar']; ?></td>
-                                <td><?php echo $row['file_SK']; ?></td>
-                                <td><?php echo $row['tanggal_upload']; ?></td>
-                                <td><?php echo $row['waktu_upload']; ?></td>
+                                <td><?php echo $row->tanggal_pelepasan; ?></td>                         
+                                <td><?php echo $row->file_gambar; ?></td>
+                                <td><?php echo $row->file_SK; ?></td>
+                                <td><?php echo $row->tanggal_upload; ?></td>
+                                <td><?php echo $row->waktu_upload; ?></td>
                                 <td>                                                                   
                                     <a href="#edittembakau" class="edit" onclick="modal_edit_varietas('<?php echo "$id"; ?>','<?php echo "$nama"; ?>','<?php echo "$gmbr"; ?>','<?php echo "$sk"; ?>','<?php echo "$tgl"; ?>','<?php echo "$nar"; ?>');"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>                                                                     
                                     <a href="" class="delete" data-toggle="modal" onclick="confirm_modal('<?php echo "$id"; ?>');"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
@@ -183,8 +192,8 @@
                          ?>
                             <tr>                                
                                 <td><?php echo $no;?></td>
-                                <td><?php echo "$row[nama_leaflet]"; ?></td>
-                                <!-- <td><?php echo "$row[file]"; ?></td> -->
+                                <td><?php echo $row->nama_leaflet; ?></td>
+                                <!-- <td><?php echo $row->file; ?></td> -->
                                 <?php 
                                     for ($i=($no-1); $i <(count($leaflet)); $i++) { 
                                         if ($i==0) {
@@ -207,8 +216,8 @@
                                             break;                               
                                         }
                                     }
-                                    $idleaflet = $row['id_leaflet'];
-                                    $nama = $row['nama_leaflet'];
+                                    $idleaflet = $row->id_leaflet;
+                                    $nama = $row->nama_leaflet;
                                  ?>
                                 <td>                               
                                      <a href="#editleaflet" class="edit" onclick="modal_edit_leaflet('<?php echo "$idleaflet"; ?>','<?php echo "$nama"; ?>','<?php echo "$idimg1"; ?>','<?php echo "$idimg2"; ?>','<?php echo "$leaflet1"; ?>','<?php echo "$leaflet2"; ?>');"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
@@ -255,15 +264,15 @@
                          ?>
                             <tr>                                
                                 <td><?php echo $no++; ?></td>
-                                <td><?php echo "$tek[jenis_teknologi_budidaya]"; ?></td>
-                                <td><?php echo "$tek[nama_file]"; ?></td> 
-                                <td><?php echo "$tek[deskripsi_file]"; ?></td>                                
-                                <td><?php echo "$tek[file]"; ?></td>                                
+                                <td><?php echo $tek->jenis_teknologi_budidaya; ?></td>
+                                <td><?php echo $tek->nama_file; ?></td> 
+                                <td><?php echo $tek->deskripsi_file; ?></td>                                
+                                <td><?php echo $tek->file; ?></td>                                
                                 <td>
-                                    <a href="#editteknologi" class="edit" onclick="modal_edit_teknologi('<?php echo $tek['id_file']; ?>','<?php echo $tek['jenis_teknologi_budidaya']; ?>','<?php echo $tek['nama_file']; ?>','<?php echo $tek['deskripsi_file']; ?>','<?php echo $tek['file']; ?>');">
+                                    <a href="#editteknologi" class="edit" onclick="modal_edit_teknologi('<?php echo $tek->id_file; ?>','<?php echo $tek->jenis_teknologi_budidaya; ?>','<?php echo $tek->nama_file; ?>','<?php echo $tek->deskripsi_file; ?>','<?php echo $tek->file; ?>');">
                                         <i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i>
                                     </a>
-                                    <a href="" class="delete" data-toggle="modal" onclick="confirm_modal_teknologi('<?php echo $tek['id_file']; ?>');"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                                    <a href="" class="delete" data-toggle="modal" onclick="confirm_modal_teknologi('<?php echo $tek->id_file; ?>');"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                                 </td>
                             </tr>
                         <?php } ?>
@@ -306,15 +315,15 @@
                          ?>
                             <tr>                                
                                 <td><?php echo $no++; ?></td>
-                                <td><?php echo "$agr[jenis_agribisnis]"; ?></td>                                
-                                <td><?php echo "$agr[deskripsi_agribisnis]"; ?></td>
-                                <td><?php echo "$agr[file]"; ?></td>
-                                <td><?php echo "$agr[gambar_agribisnis]"; ?></td>
+                                <td><?php echo $agr->jenis_agribisnis; ?></td>                                
+                                <td><?php echo $agr->deskripsi_agribisnis; ?></td>
+                                <td><?php echo $agr->file; ?></td>
+                                <td><?php echo $agr->gambar_agribisnis; ?></td>
                                 <td>
-                                     <a href="#editagribisnis" class="edit" onclick="modal_edit_agribisnis('<?php echo $agr['id_agribisnis']; ?>','<?php echo $agr['jenis_agribisnis']; ?>','<?php echo $agr['deskripsi_agribisnis']; ?>','<?php echo $agr['file']; ?>','<?php echo $agr['gambar_agribisnis']; ?>');">
+                                     <a href="#editagribisnis" class="edit" onclick="modal_edit_agribisnis('<?php echo $agr->id_agribisnis; ?>','<?php echo $agr->jenis_agribisnis; ?>','<?php echo $agr->deskripsi_agribisnis; ?>','<?php echo $agr->file; ?>','<?php echo $agr->gambar_agribisnis; ?>');">
                                         <i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i>
                                     </a>
-                                    <a href="" class="delete" data-toggle="modal" onclick="confirm_modal_agribisnis('<?php echo $agr['id_agribisnis']; ?>');"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                                    <a href="" class="delete" data-toggle="modal" onclick="confirm_modal_agribisnis('<?php echo $agr->id_agribisnis; ?>');"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                                 </td>
                             </tr>
                             <?php } ?>
@@ -356,14 +365,14 @@
                          ?>
                             <tr>                                
                                 <td><?php echo $no++; ?></td>
-                                <td><?php echo "$ben[nama_benih]"; ?></td>
-                                <td><?php echo "$ben[stok_sampai]"; ?></td>                                
-                                <td><?php echo "$ben[jumlah_stok]"; ?></td>                                
+                                <td><?php echo $ben->nama_benih; ?></td>
+                                <td><?php echo $ben->stok_sampai; ?></td>                                
+                                <td><?php echo $ben->jumlah_stok; ?></td>                                
                                 <td>
-                                    <a href="#editbenih" class="edit" onclick="modal_edit_benih('<?php echo $ben['id_benih']; ?>','<?php echo $ben['nama_benih']; ?>','<?php echo $ben['stok_sampai']; ?>','<?php echo $ben['jumlah_stok']; ?>');">
+                                    <a href="#editbenih" class="edit" onclick="modal_edit_benih('<?php echo $ben->id_benih; ?>','<?php echo $ben->nama_benih; ?>','<?php echo $ben->stok_sampai; ?>','<?php echo $ben->jumlah_stok; ?>');">
                                         <i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i>
                                     </a>
-                                    <a href="" class="delete" data-toggle="modal" onclick="confirm_modal_benih('<?php echo $ben['id_benih']; ?>');"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                                    <a href="" class="delete" data-toggle="modal" onclick="confirm_modal_benih('<?php echo $ben->id_benih; ?>');"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                                 </td>
                             </tr>
                         <?php } ?>
@@ -408,17 +417,17 @@
                          ?>
                             <tr>                                
                                 <td><?php echo $no++; ?></td>
-                                <td><?php echo "$db[nama_benih]"; ?></td>
-                                <td><?php echo "$db[tanggal]"; ?></td>                                
-                                <td><?php echo "$db[tahun_panen]"; ?></td>
-                                <td><?php echo "$db[kelas_benih]"; ?></td>                                
-                                <td><?php echo "$db[jumlah_kg]"; ?></td>
-                                <td><?php echo "$db[keterangan]"; ?></td>
+                                <td><?php echo $db->nama_benih; ?></td>
+                                <td><?php echo $db->tanggal; ?></td>                                
+                                <td><?php echo $db->tahun_panen; ?></td>
+                                <td><?php echo $db->kelas_benih; ?></td>                                
+                                <td><?php echo $db->jumlah_kg; ?></td>
+                                <td><?php echo $db->keterangan; ?></td>
                                 <td>
-                                    <a href="#editdistribusibenih" class="edit" onclick="modal_edit_distribusibenih('<?php echo $db['id_distribusi']; ?>','<?php echo $db['id_benih']; ?>','<?php echo $db['nama_benih']; ?>','<?php echo $db['tanggal']; ?>','<?php echo $db['tahun_panen']; ?>','<?php echo $db['kelas_benih']; ?>','<?php echo $db['jumlah_kg']; ?>','<?php echo $db['keterangan']; ?>',);">
+                                    <a href="#editdistribusibenih" class="edit" onclick="modal_edit_distribusibenih('<?php echo $db->id_distribusi; ?>','<?php echo $db->id_benih; ?>','<?php echo $db->nama_benih; ?>','<?php echo $db->tanggal; ?>','<?php echo $db->tahun_panen; ?>','<?php echo $db->kelas_benih; ?>','<?php echo $db->jumlah_kg; ?>','<?php echo $db->keterangan; ?>',);">
                                         <i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i>
                                     </a>
-                                    <a href="" class="delete" data-toggle="modal" onclick="confirm_modal_distribusibenih('<?php echo $db['id_distribusi']; ?>');"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                                    <a href="" class="delete" data-toggle="modal" onclick="confirm_modal_distribusibenih('<?php echo $db->id_distribusi; ?>');"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                                 </td>
                             </tr>
                         <?php } ?>
@@ -471,7 +480,7 @@
                             <label>Tanggal Pelepasan</label>
                             <!-- <div class="row">
                                 <div class="col-xs-2 col-sm-2 col-md-2"> -->
-                                    <input type="text" name="tanggalPelepasan" class="form-control" placeholder="ex : 2018/07/27" required>
+                                    <input type="date" name="tanggalPelepasan" class="form-control" placeholder="ex : 2018/07/27" required>
                                 <!-- </div>
                                 <div class="col-xs-6 col-sm-6 col-md-6">
                                     <input type="text" name="bulanPelepasan" class="form-control" placeholder="ex : 2018/07/27" required>
