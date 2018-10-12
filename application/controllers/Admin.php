@@ -60,7 +60,6 @@
 			$deskripsi = $this->input->post('deskripsi');
 			$tglPelepasan = $this->input->post('tanggalPelepasan');
 
-			// upload gambar
 			$targetpathgmbr = "assets/varietas/";
 			$targetpathsk = "assets/SK/";
 			$targetpathgmbr = $targetpathgmbr.basename($_FILES['gambar']['name']);
@@ -68,7 +67,7 @@
 
 			$gambarVarietas = "";
 			if (empty($_FILES['sk']['name']) || empty($_FILES['gambar']['name'])) {
-				$gambarVarietas = "default.jpg";
+				$gambarVarietas = "default.JPG";
 			} else {
 				$gambarVarietas = $_FILES['gambar']['name'];
 			}
@@ -182,9 +181,8 @@
 			$targetpathleaflet = "assets/leaflet/";
 
 			$this->m_tembakau->updateLeafletName($idleaflet,$nama);	
-			//hapus if yang diatas	
-			if (empty($_FILES['leaflet1']['name'])&&empty($_FILES['leaflet2']['name'])) {			
-			}elseif (!empty($_FILES['leaflet1']['name'])&&!empty($_FILES['leaflet2']['name'])) {
+			
+			if (!empty($_FILES['leaflet1']['name'])&&!empty($_FILES['leaflet2']['name'])) {
 				unlink($targetpathleaflet.$dataleaflet1[0]->file);
 				unlink($targetpathleaflet.$dataleaflet2[0]->file);
 				$targetpathleaflet1 = $targetpathleaflet.basename($_FILES['leaflet1']['name']);
@@ -204,8 +202,8 @@
 				move_uploaded_file($_FILES['leaflet2']['tmp_name'],$targetpathleaflet2);
 				$this->m_tembakau->updateLeafletImg($idgmbr2,$_FILES['leaflet2']['name']);
 			}
-			redirect(base_url('admin/home#tabelLeaflet'));
 
+			redirect(base_url('admin/home#tabelLeaflet'));
 		}
 		public function deleteLeaflet($id){			
 			$this->load->model("m_tembakau");
