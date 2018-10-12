@@ -73,7 +73,7 @@
 			return $sql->result();
 		}
 		public function get_leaflet_img(){				
-			$sql = $this->db->query("SELECT * FROM gambar_leaflet");
+			$sql = $this->db->query("SELECT * FROM gambar_leaflet order by id_gambar desc");
 			return $sql->result();
 		}
 		public function get_leaflet_img_byId($id){			

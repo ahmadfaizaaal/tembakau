@@ -197,22 +197,22 @@
                                 <?php 
                                     for ($i=($no-1); $i <(count($leaflet)); $i++) { 
                                         if ($i==0) {
-                                            echo "<td>".$gambarleaflet[$i]->file."</td>";
                                             echo "<td>".$gambarleaflet[$i+1]->file."</td>";
+                                            echo "<td>".$gambarleaflet[$i]->file."</td>";
 
-                                            $idimg1 = $gambarleaflet[$i]->id_gambar;
-                                            $idimg2 = $gambarleaflet[$i+1]->id_gambar;
-                                            $leaflet1 = $gambarleaflet[$i]->file;
-                                            $leaflet2 = $gambarleaflet[$i+1]->file;
+                                            $idimg1 = $gambarleaflet[$i+1]->id_gambar;
+                                            $idimg2 = $gambarleaflet[$i]->id_gambar;
+                                            $leaflet1 = $gambarleaflet[$i+1]->file;
+                                            $leaflet2 = $gambarleaflet[$i]->file;
                                             break;
                                         }else{                                            
-                                            echo "<td>".$gambarleaflet[$i*2]->file."</td>";
                                             echo "<td>".$gambarleaflet[($i*2)+1]->file."</td>";
+                                            echo "<td>".$gambarleaflet[$i*2]->file."</td>";
 
-                                            $idimg1 = $gambarleaflet[$i*2]->id_gambar;
-                                            $idimg2 = $gambarleaflet[($i*2)+1]->id_gambar;
-                                            $leaflet1 = $gambarleaflet[$i*2]->file;
-                                            $leaflet2 = $gambarleaflet[($i*2)+1]->file;
+                                            $idimg1 = $gambarleaflet[($i*2)+1]->id_gambar;
+                                            $idimg2 = $gambarleaflet[$i*2]->id_gambar;
+                                            $leaflet1 = $gambarleaflet[($i*2)+1]->file;
+                                            $leaflet2 = $gambarleaflet[$i*2]->file;
                                             break;                               
                                         }
                                     }
@@ -471,7 +471,7 @@
                         <div class="form-group" style="padding-bottom: 0px">
                             <label>Upload SK</label>
                             <div class="input-group">                                
-                                <input type="file" id="picked" name="sk" style="display:none" onchange="document.getElementById('filename').value=this.value" accept="application/pdf">
+                                <input type="file" id="picked" name="sk" style="display:none" onchange="document.getElementById('filename').value=this.value" accept="application/pdf" required>
                                 <input type="text" id="filename" style="width: 468px;height: 35px;" disabled="disable">
                                 <input type="button" value="Pilih File" onclick="document.getElementById('picked').click()" style="height: 35px;margin-top: -2px;" class="btn btn-default">
                             </div>
