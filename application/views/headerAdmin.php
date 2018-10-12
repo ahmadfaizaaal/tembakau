@@ -34,7 +34,7 @@
 					    <ul class="nav navbar-nav navbar-right" style="margin-top: 10px;margin-right: 0px;">
 					      	<!-- <a href="<?php echo base_url() ?>" class="glyphicon glyphicon-home dropbtnHeader" style="text-decoration-line: none;font-size: 14px;"></a> -->
 					      	<div class="dropdownHeader">							  								  	
-							  	<a href="<?php echo base_url('admin/logout'); ?>" style="text-decoration-line: none;"><div class="dropbtnHeader" style="font-family: Minion Pro; cursor: pointer;"><i class="glyphicon glyphicon-log-out" style="font-size:14px;"></i>&nbsp Logout </div></a>
+							  	<a href="<?php echo base_url('admin/logout'); ?>" style="text-decoration-line: none;"><div class="dropbtnHeader" style="font-family: Minion Pro; cursor: pointer;">Logout &nbsp<i class="glyphicon glyphicon-log-out" style="font-size:14px;"></i></div></a>
 							</div>																			      		     
 					    </ul>				    
 				    </div>				    

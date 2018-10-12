@@ -414,8 +414,10 @@
 			$this->load->model("m_tembakau");
 			$targetpathagrigmbr = "assets/gambarAgribisnis/";
 			$targetpathagrifile = "assets/fileAgribisnis/";
-			$dataagri = $this->m_tembakau->get_agri_byId($id);			
-			unlink($targetpathagrigmbr.$dataagri[0]->gambar_agribisnis);
+			$dataagri = $this->m_tembakau->get_agri_byId($id);
+			if ($dataagri[0]->gambar_agribisnis != "default.JPG") {				
+				unlink($targetpathagrigmbr.$dataagri[0]->gambar_agribisnis);
+			}
 			unlink($targetpathagrifile.$dataagri[0]->file);
 			$this->m_tembakau->delete_agribisnis($id);
 			redirect(base_url('admin/home#tabelAgribisnis'));
