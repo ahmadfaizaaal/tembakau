@@ -1,5 +1,6 @@
 <?php 	
 	class varietas extends CI_Controller {
+		// $jenis, $namaAtribut, $idVarietas, $namaVarietas;
 		function __construct() {
 			parent::__construct();
             $this->CI = & get_instance();

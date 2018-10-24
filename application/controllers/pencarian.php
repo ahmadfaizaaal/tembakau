@@ -1,5 +1,6 @@
 <?php 
 	class pencarian extends CI_Controller{
+		// $keyword;
 
 		function __construct() {
 			parent::__construct();

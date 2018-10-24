@@ -1,5 +1,6 @@
 <?php 
 	class admin extends CI_Controller{
+		// $username, $password, $idVarietas;
 		public function index(){
 			$data['judul'] = "Masuk - Balai Penelitian Tanaman Pemanis dan Serat";
 			$this->load->view('login', $data);
