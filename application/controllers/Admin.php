@@ -8,10 +8,12 @@
 		public function login(){			
 			$username = $this->input->post('username'); 
 			$password = $this->input->post('password');			
-			if ($username == "balittas" && $password == "admin") {
-				// $this->load->model("m_tembakau");
+			if ($username == "balittas" && $password == "admin") {				
 				$this->session->set_userdata(array('akunAktif'=>"Administrator"),true);
 				redirect(base_url('admin/home'));
+			}if($username == "balittas" && $password == "benih"){
+				$this->session->set_userdata(array('akunAktifBenih'=>"AdministratorBenih"),true);
+				redirect(base_url('admin/adminBenih'));
 			}else{
 				$data['coba'] = "salah";
 				$data['judul'] = "Admin - Balai Penelitian Tanaman Pemanis dan Serat";
@@ -19,8 +21,12 @@
 				$this->load->view('login', $data);
 			}			
 		}		
-		public function logout() {
-			$this->session->sess_destroy();
+		public function logout() {			
+			$this->session->unset_userdata('akunAktif');
+			redirect(base_url('admin'));
+		}
+		public function logoutBenih() {
+			$this->session->unset_userdata('akunAktifBenih');
 			redirect(base_url('admin'));
 		}
 		public function home(){		
@@ -38,6 +44,15 @@
 			$dataHeader['judul'] = "Admin";
 			$this->load->view("headerAdmin",$dataHeader);
 			$this->load->view("v_admin_tembakau", $data);
+		}
+		public function adminBenih(){
+			$this->load->model("m_tembakau");
+			$dataHeader['judul'] = "Admin";
+			$this->load->view("headerAdmin",$dataHeader);		
+			$data['benih'] = $this->m_tembakau->get_benih();
+			$data['distribusiBenih'] = $this->m_tembakau->get_distribusi_benih();
+			$data['ListNamaBenih'] = $this->m_tembakau->get_nama_benih();
+			$this->load->view("v_admin_benih", $data);
 		}
 	//========================================VARIETAS========================================
 		public function deleteVarietas($id){			
@@ -226,8 +241,13 @@
 			$jumstok = $this->input->post('jumlahstok');		
 		
 			$this->m_tembakau->add_benih($namabenih,$stoksampai,$jumstok);
-			
-			redirect(base_url('admin/home#tabelBenih'));
+
+			if ($this->session->userdata('akunAktif')=="Administrator") {				
+				redirect(base_url('admin/home#tabelBenih'));
+			}
+			if ($this->session->userdata('akunAktifBenih')=="AdministratorBenih") {
+				redirect(base_url('admin/adminBenih#tabelBenih'));	
+			}
 		}
 		public function editBenih(){
 			$this->load->model("m_tembakau");	
@@ -238,12 +258,24 @@
 			$jumlahstok = $this->input->post('editjumlahstok');	
 
 			$this->m_tembakau->update_benih($id,$namabenih,$stoksampai,$jumlahstok);
-			redirect(base_url('admin/home#tabelBenih'));
+
+			if ($this->session->userdata('akunAktif')=="Administrator") {				
+				redirect(base_url('admin/home#tabelBenih'));
+			}
+			if ($this->session->userdata('akunAktifBenih')=="AdministratorBenih") {
+				redirect(base_url('admin/adminBenih#tabelBenih'));	
+			}
 		}
 		public function deleteBenih($id){			
 			$this->load->model("m_tembakau");		
 			$this->m_tembakau->delete_benih($id);
-			redirect(base_url('admin/home#tabelBenih'));
+			
+			if ($this->session->userdata('akunAktif')=="Administrator") {				
+				redirect(base_url('admin/home#tabelBenih'));
+			}
+			if ($this->session->userdata('akunAktifBenih')=="AdministratorBenih") {
+				redirect(base_url('admin/adminBenih#tabelBenih'));	
+			}
 		}
 
 		// PRODUK DISTRIBUSI BENIH
@@ -269,6 +301,13 @@
 			}
 			
 			redirect(base_url('admin/home#tabelDistribusibenih'));
+
+			if ($this->session->userdata('akunAktif')=="Administrator") {				
+				redirect(base_url('admin/home#tabelDistribusibenih'));
+			}
+			if ($this->session->userdata('akunAktifBenih')=="AdministratorBenih") {
+				redirect(base_url('admin/adminBenih#tabelDistribusibenih'));	
+			}
 		}
 		public function editDistribusiBenih(){
 			$this->load->model("m_tembakau");	
@@ -281,13 +320,25 @@
 			$jum = $this->input->post('editjumlah');
 			$ket = $this->input->post('editketerangan');		
 
-			$this->m_tembakau->update_distribusi_benih($iddistribusi,$tgl,$thn,$kls,$jum,$ket);
-			redirect(base_url('admin/home#tabelDistribusibenih'));
+			$this->m_tembakau->update_distribusi_benih($iddistribusi,$tgl,$thn,$kls,$jum,$ket);			
+
+			if ($this->session->userdata('akunAktif')=="Administrator") {				
+				redirect(base_url('admin/home#tabelDistribusibenih'));
+			}
+			if ($this->session->userdata('akunAktifBenih')=="AdministratorBenih") {
+				redirect(base_url('admin/adminBenih#tabelDistribusibenih'));	
+			}
 		}
 		public function deleteDistribusiBenih($id){			
 			$this->load->model("m_tembakau");		
 			$this->m_tembakau->delete_distribusi_benih($id);
-			redirect(base_url('admin/home#tabelDistribusibenih'));
+			
+			if ($this->session->userdata('akunAktif')=="Administrator") {				
+				redirect(base_url('admin/home#tabelDistribusibenih'));
+			}
+			if ($this->session->userdata('akunAktifBenih')=="AdministratorBenih") {
+				redirect(base_url('admin/adminBenih#tabelDistribusibenih'));	
+			}
 		}
 
 	//========================================TEKNOLOGI========================================
