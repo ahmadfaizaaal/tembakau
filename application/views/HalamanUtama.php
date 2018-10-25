@@ -12,7 +12,7 @@
 					  	<li class="active">Beranda</li> 
 					  	<li></li>
 					</ul>
-				<h3 class="text-left" style="color:black; font-family: helmet">Varietas Terbaru</h3>
+				<h3 class="text-left" style="color:black; font-family: helmet">Varietas Unggul Baru</h3>
 				<hr style="border-color: grey; margin-top: -10px;">
 				<div class="row" style="margin-top: -7px;">
 					<?php 

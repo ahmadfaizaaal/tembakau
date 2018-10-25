@@ -66,7 +66,7 @@
 							<th>No</th>
 							<th>Varietas</th>
 							<th>Persediaan sampai</th>
-							<th>Jumlah (gr)</th>
+							<th>Jumlah (g)</th>
 						</thead >
 						<tbody>
 						<?php 
@@ -155,7 +155,7 @@
 								<th>Tahun Panen</th>
 								<th>Kelas Benih</th>
 								<th class="text-center">Jumlah (Kg)</th>
-								<th>Keterangan</th>
+								<th>Luas Lahan</th>
 							</thead >
 							<tbody>
 							<?php 

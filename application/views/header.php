@@ -50,9 +50,9 @@
 							          	<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
 							          	<a href="<?php echo base_url() ?>varietas/jenistembakau/waktutanam">Waktu Tanam</a>
 							          	<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
-							          	<a href="<?php echo base_url() ?>varietas/jenistembakau/daerahpengembangan">Daerah Pengembangan</a>
+							          	<a href="<?php echo base_url() ?>varietas/jenistembakau/daerahpengembangan">Daerah Pengembangan Varietas Tembakau</a>
 							          	<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
-							          	<a href="<?php echo base_url() ?>varietas/jenistembakau/daerahpenanaman" style="margin-bottom: 8px;">Daerah Penanaman</a>							          	
+							          	<a href="<?php echo base_url() ?>varietas/jenistembakau/daerahpenanaman" style="margin-bottom: 8px;">Sentra Penanaman Jenis Tembakau</a>							          	
 								  	</div>							  	
 							  	</div>
 							</div>
@@ -111,8 +111,8 @@
 						        	<li><a href="<?php echo base_url() ?>varietas/jenistembakau/asalusul">Asal Usul</a></li>
 						          	<li><a href="<?php echo base_url() ?>varietas/jenistembakau/kegunaan">Kegunaan</a></li>
 						          	<li><a href="<?php echo base_url() ?>varietas/jenistembakau/waktutanam">Waktu Tanam</a></li>
-						          	<li><a href="<?php echo base_url() ?>varietas/jenistembakau/daerahpengembangan">Daerah Pengaembangan</a></li>
-						          	<li><a href="<?php echo base_url() ?>varietas/jenistembakau/daerahpenanaman">Daerah Penanaman</a></li>
+						          	<li><a href="<?php echo base_url() ?>varietas/jenistembakau/daerahpengembangan">Daerah Pengaembangan Varietas Tembakau</a></li>
+						          	<li><a href="<?php echo base_url() ?>varietas/jenistembakau/daerahpenanaman">Sentra Penanaman Jenis Tembakau</a></li>
 						       	</ul>
 					      	</li>
 					      	<li class="dropdown">

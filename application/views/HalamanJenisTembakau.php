@@ -18,7 +18,7 @@
 				
 					<?php 
 // JENIS TEMBAKAU BERDASARKAN KEGUNAAN DAN DAERAH PENANAMAN	-------------------------------------------------------------------------------------
-						if ($kategori == "Kegunaan" || $kategori == "Daerah Penanaman") { ?>
+						if ($kategori == "Kegunaan" || $kategori == "Sentra Penanaman Jenis Tembakau") { ?>
 							<table class="table table-hover" style="margin-top: -7px;">
 								<thead style="background-color: rgba(28,69,26,0.9);border-bottom: 3px solid white; color:#fece00;">
 									<th>No</th>
@@ -31,7 +31,7 @@
 									foreach ($jenistembakau as $row) {
 										if ($kategori == "Kegunaan") {
 											$value = $row->kegunaan;
-										} else if ($kategori == "Daerah Penanaman") {
+										} else if ($kategori == "Sentra Penanaman Jenis Tembakau") {
 											$value = $row->daerah_penanaman;
 										}
 								 ?>
@@ -55,7 +55,7 @@
 
 // JENIS TEMBAKAU BERDASARKAN ASAL-USUL DAN DAERAH PENGEMBANGAN	-------------------------------------------------------------------------------------
 							
-						} else if ($kategori == "Asal-usul" || $kategori == "Daerah Pengembangan") { ?>
+						} else if ($kategori == "Asal-usul" || $kategori == "Daerah Pengembangan Varietas Tembakau") { ?>
 							<table class="table table-hover" style="margin-top: -7px;">
 								<thead style="background-color: rgba(28,69,26,0.9);border-bottom: 3px solid white; color:#fece00;">
 									<th class="text-center">No</th>

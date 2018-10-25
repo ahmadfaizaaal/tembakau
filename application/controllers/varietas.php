@@ -47,10 +47,10 @@
  					$data['value'] = substr($kategori, 13, (strlen($kategori)-1));
  				}
  			} else if ($kategori == "daerahpengembangan") {
- 				$jenis = "Daerah Pengembangan";
+ 				$jenis = "Daerah Pengembangan Varietas Tembakau";
  				$namaAtribut = "Daerah pengembangan";
  			} else if ($kategori == "daerahpenanaman") {
- 				$jenis = "Daerah Penanaman";
+ 				$jenis = "Sentra Penanaman Jenis Tembakau";
  				$data['jenistembakau'] = $this->m_varietas->selectJenisTembakau();
  			}
 
